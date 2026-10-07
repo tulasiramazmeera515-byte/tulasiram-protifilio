@@ -38,7 +38,7 @@ export const personalInfo = {
   linkedin: "https://www.linkedin.com/in/tulasiram-azmeera-86948b378/",
   email: "thulasiramazmeera@gmail.com",
   resume: "/resume.pdf",
-  profileImage: "/about-profile.jpg",
+ profileImage: `${import.meta.env.BASE_URL}profile.jpg`,
 };
 
 export const aboutData = {

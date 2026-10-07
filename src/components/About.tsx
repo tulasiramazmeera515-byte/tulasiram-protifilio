@@ -20,13 +20,13 @@ export const About: React.FC = () => {
             {/* Permanent Profile Photo Frame matching reference w-56 h-72 rounded-2xl */}
             <div className="w-56 h-72 rounded-2xl overflow-hidden border border-border bg-card shadow-lg">
               <img
-                src="/about-profile.jpg"
+                src={`${import.meta.env.BASE_URL}profile.jpg`}
                 alt={personalInfo.name}
                 referrerPolicy="no-referrer"
                 onError={(e) => {
                   const target = e.currentTarget;
-                  if (!target.src.endsWith('/profile.jpg')) {
-                    target.src = '/profile.jpg';
+                  if (!target.src.includes(`${import.meta.env.BASE_URL}profile.jpg`)) {
+                    target.src = `${import.meta.env.BASE_URL}profile.jpg`;
                   }
                 }}
                 className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
